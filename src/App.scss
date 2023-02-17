@@ -1,0 +1,35 @@
+
+.navbarCrown {
+    height : 100%;
+    background-image: url(../public/pictures/CROWN-bckgrnd.png);
+}
+
+.navbarCookie {
+    height : 100%;
+    background: url("../public/pictures/NAV_PIC.png") top/100% 30% no-repeat;
+}
+
+.title {
+    letter-spacing: -0.09em;
+}
+
+.grotesk {
+    font-family: "Cabinet Grotesk";
+}
+
+.script {
+    font-family: "Curlz MT";
+}
+
+.add :hover {
+    background-color: #D24B4B;
+}
+
+
+
+
+@media only screen and (max-width : "480px"){
+    .navbarCookie {
+        background: url("../public/pictures/NAV_PIC.png") top/100% 25% no-repeat;
+    }
+}
