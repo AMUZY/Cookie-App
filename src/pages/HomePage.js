@@ -1,30 +1,23 @@
 import Obutton from "../components/Obutton";
 import HeroText from "../components/HeroText";
 import HeroText2 from "../components/HeroText2";
+
 import "../App.scss"
 
 
+
 export default function HomePage () {
+
+
     return (
         <div className="homepage">
-                {/* Background Image background */}
+                {/* Background Image background XL*/}
             <img
-                id="bck-image"
-                className="hidden absolute rotate-180 w-96 md:w-96 md:rotate-0 lg:block xl:w-auto lg:top-48 lg:left-1/3 xl:top-48 xl:left-1/4"
+                id="bck_image"
+                className="hidden z-[0] absolute rotate-180 w-96 md:w-96 md:rotate-0 lg:block xl:w-auto lg:top-48 lg:left-1/3 xl:top-48 xl:left-1/4"
                 src="pictures/LAND_PIC.png"
                 alt="ameno"
             />
-
-                {/* Background Image 2nd with Div*/}
-            <div className="hidden my-10 flex justify-center w-full xl:hidden">
-                <img
-                id="bck-image"
-                className="rotate-180 w-96 translate-y-0 md:w-96 md:rotate-0 xl:w-auto"
-                src="pictures/LAND_PIC.png"
-                alt="ameno"
-                />
-            </div>
-
 
       {/* lg:-translate-y-72 xl:-translate-y-3/4 */}
 
@@ -50,7 +43,7 @@ export default function HomePage () {
                     <p className="font-medium">to marvel your tastebuds</p>
                     <Obutton text="Order Now" />
                 </div>
-                {/* Get Up To 1st*/}
+                {/* Get Up To XL */}
                 <div className="hidden w-auto h-max mr-5 mt-24 flex flex-col items-end md:flex">
                     <img
                     className="w-20 h-20"
@@ -73,10 +66,11 @@ export default function HomePage () {
                 </div>
             </section>
 
-            {/* Get Up To 2nd*/}
+            {/* Get Up To SM */}
             <section id = "bottom" className="mt-24">
-                <div className="flex justify-between items-center bg-red-600 py-5 my-5 md:bg-transparent md:justify-end">
-                    <div className="bg-white rounded-2xl flex justify-center items-center w-32 mx-5 h-max md:bg-red-600 xl:w-72 ">
+                <div className="flex justify-between items-center bg-red-600 py-5 mt-5 md:bg-transparent md:justify-end">
+                    {/* All the Cookies... */}
+                    <div className="all bg-white rounded-2xl flex justify-center items-center w-32 mx-5 h-max md:bg-red-600 xl:w-72 ">
                         <h2 className="w-max h-max flex items-center text-md text-red-600 font-bold m-6 md:text-white lg:text-xl xl:text-2xl">
                         All the cookies you'll ever need
                         </h2>

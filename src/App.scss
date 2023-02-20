@@ -5,8 +5,8 @@
 }
 
 .navbarCookie {
-    height : 100%;
-    background: url("../public/pictures/NAV_PIC.png") top/100% 30% no-repeat;
+    height : 15em;
+    background: url("../public/pictures/NAV_PIC.png") top/100% 100% no-repeat;
 }
 
 .title {
@@ -21,15 +21,99 @@
     font-family: "Curlz MT";
 }
 
+// STYLE TO NOT SHOW ANY BLUE HIGHLIGHTING ON CLICK ON MOBILE
+.cartBtn {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.cartBtn:focus {
+    outline: none !important;
+}
+
+.add {
+    background-color: #C13434; 
+}
+
 .add :hover {
     background-color: #D24B4B;
 }
 
+@keyframes ScaleCard {
+    80% {
+        transform: scale(1.05);
+    }
+    100%{
+        transform : scale(1);
+    }
+}
 
+// Home Page Elements
+#main_content {
+    animation: ScaleCard .3s ease-in-out; 
+}
+#bck_image {
+    animation: ScaleCard .3s ease-in-out; 
+    animation-delay: .5s;
+}
+.all {
+    animation: ScaleCard .3s ease-in-out; 
+    animation-delay: 1s;
+}
+// The img and co
+.card :nth-child(n) :nth-child(n) {
+    transition: transform .2s ease-out;
+    animation: ScaleCard .3s ease-in-out; 
+}
+// The img and co hover
+.card :nth-child(n) :hover {
+    transform: scale(1.05);
+}
 
+.cardCont{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.cardImg{
+
+    transition: transform .2s ease-out;
+}
+
+.cardCont :hover{
+    transform: scale(1.1);
+}
+
+// THE CART
+// USED IN APP.JS
+.cart{
+    background-color: #FFFAF0;
+    transition : .3s linear ;
+    // scrollbar-width: none;
+}
+
+// HIDE THE SCROLL BAR
+.cart ::-webkit-scrollbar{
+    display: none;
+}
+// THE BLUR BOX
+.blurbox{
+    background-color: black;
+    transition : .1s ease-out;
+    opacity: 70%;
+}
 
 @media only screen and (max-width : "480px"){
     .navbarCookie {
-        background: url("../public/pictures/NAV_PIC.png") top/100% 25% no-repeat;
+        height : 8em;
+        background: url("../public/pictures/NAV_PIC.png") top/100% 100% no-repeat;
+    }
+
+    .add :hover {
+        background-color: #C13434; 
     }
 }

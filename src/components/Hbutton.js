@@ -34,7 +34,9 @@ function Hbutton(props) {
 
 
   return (
-    <button className="w-20 h-5 font text-base color:white text-white flex justify-end md:justify-center md:flex-row">
+    <button className="cartBtn w-20 h-5 font text-base color:white text-white flex justify-end md:justify-center md:flex-row"
+        onClick={props.onclick}
+      >
       <div className="flex items-center mx-0 md:block">
         <svg className = "w-full h-full"
             width="24"
