@@ -7,7 +7,7 @@ import Recipes from "./pages/Recipes";
 import About from "./pages/About";
 import CookieMenu from "./pages/CookieMenu";
 import DrinkMenu from "./pages/DrinksMenu";
-import { useReducer, useState, useEffect } from "react";
+import { useReducer, useState } from "react";
 import CartItem from "./components/CartItem";
 import { v4 as uuidv4 } from "uuid";
 
@@ -16,13 +16,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   const [store, setStore] = useState([]);
-  const [finalsubT, setFinalsubT] = useState([]);
-
-  const [sub, setSub] = useState();
-
 
   // Function to make store state to update to effect the item removal from cart
-  const [ignored, eUpdate] = useReducer((x) => x + 1, 0);
+  const [eUpdate] = useReducer((x) => x + 1, 0);
 
   const cards = [
     {item : 1 , num : 1,  src : "pictures/Double.png", name : "Double Chocolate", symbol: "₦", price : 4000},
@@ -47,20 +43,20 @@ export default function App() {
   }
   
 
-  // Function that adds a price when you press plus
-  function SubTotal(subT) {
-    finalsubT.push(subT);
-  }
+  // // Function that adds a price when you press plus
+  // function SubTotal(subT) {
+  //   finalsubT.push(subT);
+  // }
 
   // Function that removes a price when you press minus
-  function RemTotal(num, subT) {
-    for (let i = 0; i < finalsubT.length; i++) {
-      if (finalsubT[i] === subT && num !== 1) {
-        finalsubT.splice(i, 1);
-        break;
-      }
-    }
-  }
+  // function RemTotal(num, subT) {
+  //   for (let i = 0; i < finalsubT.length; i++) {
+  //     if (finalsubT[i] === subT && num !== 1) {
+  //       finalsubT.splice(i, 1);
+  //       break;
+  //     }
+  //   }
+  // }
 
   // Function called to remove the price from the subtotal array when we click the Remove button
   // function RemPrice(subT) {
@@ -75,14 +71,6 @@ export default function App() {
 
   // CLASS TO STORE ITEM NO
 
-  class Prices {
-    constructor(num, item) {
-      this.value = num;
-      this.item = item;
-    }
-  }
-
-  let userArray = [];
   // Function to create users to get their item no in cart each
   // num is going to come from num and item is going to come from props.item in CARTITEM !!!!!!!!!!
 
@@ -173,6 +161,7 @@ export default function App() {
     // }
     store.map((element)=>{
       SubTotal = SubTotal + element.price;
+      return true;
     })
     return SubTotal;
   }
@@ -212,13 +201,13 @@ export default function App() {
 
     setStore([...store, obj2]);
     
-    finalsubT.push(obj2.price);
+    // finalsubT.push(obj2.price);
 
     store.map((element) => {
       if (element.item === obj2.item) {
         alert("item already in cart");
-        finalsubT.pop();
-        console.log(finalsubT);
+        // finalsubT.pop();
+        // console.log(finalsubT);
       }
       return true;
     });
@@ -240,13 +229,13 @@ export default function App() {
 
   
   // Code to Add up the all the prices and give back the sum
-  let allsum = 0;
-  if (finalsubT.length > 0) {
-    allsum = finalsubT.reduce(function (a, b) {
-      return a + b;
-    });
-    // handleClick();
-  }
+  // let allsum = 0;
+  // if (finalsubT.length > 0) {
+  //   allsum = finalsubT.reduce(function (a, b) {
+  //     return a + b;
+  //   });
+  //   // handleClick();
+  // }
 
 
   const [cart, setCart] = useState(
