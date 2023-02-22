@@ -4,19 +4,16 @@ import "../App.scss";
 export default function CartItem(props) {
   const [num, setNum] = useState(1);
 
+  
   function IncNum() {
-    if (num === 10) {
-      alert("YOU WAN BUY ALL THE MARKET NI???");
-    }
+
     setNum(num + 1);
   }
   function DecNum() {
-    if (num === 1) {
-      alert("minimum number reached");
-    } else {
-      setNum(num - 1);
-    }
+    setNum(num - 1);
   }
+
+
 
   return (
     <div className="py-4 h-28 flex border-b-[1px] border-gray-400 md:py-6 md:h-40">
@@ -39,9 +36,11 @@ export default function CartItem(props) {
           {/* INCREASE OR DECREASE BUTTON */}
           <div className="w-[60px] flex justify-between md:w-[70px]">
             <button
-              className="increase"
+              className="Decrease"
               onClick={() => {
                 DecNum(num);
+                // props.RemTotal(num, props.price);
+                  props.DelUser(num, props.item)
               }}
             >
               <img
@@ -50,11 +49,13 @@ export default function CartItem(props) {
                 alt="negative sign"
               />
             </button>
-            <h3 className="text-xs font-medium"> {num} </h3>
+            <h3 className="text-xs font-medium"> {props.PullNum(props.item)} </h3>
             <button
-              className="decrease"
+              className="Increase"
               onClick={() => {
                 IncNum(num);
+                // props.SubTotal(props.price);
+                props.CreateUser(num, props.item)
               }}
             >
               <img
@@ -72,6 +73,7 @@ export default function CartItem(props) {
             <button
               className="flex justify-center items-center"
               onClick={() => {
+                // props.RemPrice(props.price);
                 props.DelItem(props.item);
               }}
             >
@@ -87,7 +89,7 @@ export default function CartItem(props) {
             </button>
           </div>
           {/* PRICE TAG */}
-          <h3 className="text-xs font-bold">{"₦" + props.price * num}</h3>
+          <h3 className="text-xs font-bold">{"₦" + props.RetPrice(props.item)}</h3>
         </div>
       </div>
     </div>
