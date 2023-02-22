@@ -18,7 +18,7 @@ export default function App() {
   const [store, setStore] = useState([]);
 
   // Function to make store state to update to effect the item removal from cart
-  const [eUpdate] = useReducer((x) => x + 1, 0);
+  const [ignored, eUpdate] = useReducer((x) => x + 1, 0);
 
   const cards = [
     {item : 1 , num : 1,  src : "pictures/Double.png", name : "Double Chocolate", symbol: "₦", price : 4000},
@@ -71,6 +71,7 @@ export default function App() {
 
   // CLASS TO STORE ITEM NO
 
+  // let userArray = [];
   // Function to create users to get their item no in cart each
   // num is going to come from num and item is going to come from props.item in CARTITEM !!!!!!!!!!
 
