@@ -19,6 +19,7 @@ export default function App() {
 
   // Function to make store state to update to effect the item removal from cart
   const [ignored, eUpdate] = useReducer((x) => x + 1, 0);
+  console.log(ignored);
 
   const cards = [
     {item : 1 , num : 1,  src : "pictures/Double.png", name : "Double Chocolate", symbol: "₦", price : 4000},
