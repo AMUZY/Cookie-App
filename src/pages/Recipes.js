@@ -17,7 +17,7 @@ export default function Recipes () {
             {/* chocolate cookies div done by flexbox and grid */}
             <div className = "gridbox max-h-max">
                 {/* Chocolate Cookies IMG */}
-                <div className = "imgbox" ><img className = "m-0 cookie_img" src = "pictures/recipe_1.png" /></div>
+                <div className = "imgbox" ><img className = "m-0 cookie_img" src = "pictures/recipe_1.png"  alt = "cookie" /></div>
                 {/* Chocolate Cookies TITLE */}
                 <div className = "recipes titlebox h-[50]%" ><h3 className = "script title" >Chocolate Cookies</h3></div>
                 {/* Chocolate Cookies Ingredients */}
@@ -88,7 +88,7 @@ export default function Recipes () {
             {/* danish butter cookies div done by grid */}
             <div className = "gridbox max-h-max">
                 {/* Danish Cookies IMG */}
-                <div className = "imgbox" ><img className = "m-0 cookie_img" src = "pictures/recipe_2.png"/></div>
+                <div className = "imgbox" ><img className = "m-0 cookie_img" src = "pictures/recipe_2.png" alt = "cookie" /></div>
                 {/* Danish Cookies TITLE */}
                 <div className = "recipes titlebox" ><h3 className = "script title" >Danish Butter Cookies</h3></div>
                 {/* Danish Cookies Ingredients */}

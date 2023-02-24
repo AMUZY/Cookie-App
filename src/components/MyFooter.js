@@ -18,11 +18,11 @@ export default function MyFooter (){
                     {/* Phone */}
                     <h2 className="footertxt footersub"> Phone </h2>
                     {/* number 1 */}
-                    <a className="footertxt phone">
+                    <a href = "wa.me//+2348007637487" className="footertxt phone">
                         +2348007637487
                     </a>
                     {/* number 2 */}
-                    <a className="footertxt phone">
+                    <a href = "wa.me//+2349124342353" className="footertxt phone">
                         +2349124342353
                     </a>
                 </div>
@@ -40,11 +40,11 @@ export default function MyFooter (){
                     <h1 className="footertxt footersub"> Social Media </h1>
                     <div className="flex justify-start my-[2%]">
                         {/* INSTAGRAM */}
-                        <a className = "m-[5%] md:m-[5%]" href = "https://instagram.com" ><img src = "pictures/instagram-png.png" /></a>
+                        <a className = "m-[5%] md:m-[5%]" href = "https://instagram.com" ><img src = "pictures/instagram-png.png" alt = "instagram" /></a>
                         {/* LINKED IN */}
-                        <a className = "m-[5%] md:m-[5%]" href = "https://linkedin.com" ><img src = "pictures/linkedin-png.png" /></a>
+                        <a className = "m-[5%] md:m-[5%]" href = "https://linkedin.com" ><img src = "pictures/linkedin-png.png"alt = "linkedin" /></a>
                         {/* TWITTER */}
-                        <a className = "m-[5%] md:m-[5%]" href = "https://twitter.com" ><img src = "pictures/twitter-png.png" /></a>
+                        <a className = "m-[5%] md:m-[5%]" href = "https://twitter.com" ><img src = "pictures/twitter-png.png" alt = "twitter" /></a>
                     </div>
                 </div>
                 {/* Location DIV */}
