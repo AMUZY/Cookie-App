@@ -1,0 +1,59 @@
+@use "sass:map";
+
+$border : 6px;
+$heightmd : 36px;
+$heightxl : 64px;
+
+$btn-colors : (
+    "addbtncolor" : #C13434,
+    "proceedbtncolor" : #793820,
+    "paybtnimage" : linear-gradient(to right, #793820, #C13434),
+);
+
+
+.cardbtn {
+    margin-top : 12px;
+    width : 100%;
+    border-radius: $border;
+    height : 32px;
+    background-color: #C13434; 
+}
+
+.cardbtn :hover {
+    background-color: #D24B4B; 
+}
+
+
+.proceedbtn {
+    margin : 12px 0 12px 0;
+    width : 40%;
+    border-radius: $border;
+    height : 32px;
+    background-color: map.get($btn-colors, "proceedbtncolor");
+}
+
+.proceedbtn :hover {
+    background-color: #975239; 
+}
+
+.paybtn {
+    background-image: map.get($btn-colors, "paybtnimage");
+}
+
+@media only screen and (min-width : 768px) {
+    .cardbtn {
+        height : $heightmd;
+    }
+    .proceedbtn {
+        height : $heightmd;
+    }
+}
+
+@media only screen and (min-width : 1440px) {
+    .cardbtn {
+        height : $heightxl;
+    }
+    .proceedbtn {
+        height : $heightxl;
+    }
+}

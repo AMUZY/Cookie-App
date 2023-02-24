@@ -1,0 +1,286 @@
+@keyframes ScaleCard {
+    80% {
+        transform: scale(1.05);
+    }
+    100%{
+        transform : scale(1);
+    }
+}
+
+.animate{
+    animation: ScaleCard .3s ease-in-out;
+}
+
+.cookie_img {
+    height: 100%;
+    width : 100%;
+}
+
+.imgbox {
+    height: 100%;
+    animation: ScaleCard .3s ease-in-out;
+    animation-delay : .5s;
+}
+
+.titlebox {
+    padding : 0 2% 0 2%;
+    animation: ScaleCard .3s ease-in-out;
+    animation-delay : 1s;
+}
+
+.title {
+    font-size: x-large;
+    font-weight : 700;
+    letter-spacing: .001rem;
+}
+
+.ingrdbox {
+    width : 100%;
+    padding-top : 2%;
+    padding-bottom: 2%;
+}
+
+.ingrd {
+    font-weight: 500;
+    margin : 0 20px 0 20px;
+}
+
+.prepbox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.tipbox {
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.ul1 {
+    display : flex;
+    flex-flow : column wrap;
+    justify-content: space-between;
+    padding: 0 1.5rem 0 1.5rem;
+    list-style-type : circle;
+    list-style-position: inside;
+}
+
+.ul1 > li {
+    flex : 0 0 100%;
+    font-size: small;
+}
+
+.para {
+    font-size : small;
+    padding: 0 5% 5% 5%;
+}
+
+.gridbox {
+    margin : 16px 5% 16px 5%;
+    display : flex;
+    flex-flow : column nowrap;
+    width : 90%;
+}
+
+// CUSTOMER BACKGROUND DIV
+.cstbgrd {
+    width : 100%;
+    padding : 5% 0 5% 0;
+    display : flex;
+    flex-flow : row wrap;
+    justify-content: space-around;
+    background-image: linear-gradient(to right , #000000 , #5A5A5A);
+}
+// CUSTOMER DIV
+.cst {
+    background-color: #ffffff;
+    flex : 0 0 90%;
+    margin : 5%;
+    padding : 5%;
+    height: max-content;
+}
+// tHE CUSTOMER PARAGRAPH
+.cst > p {
+    margin : 3% 0 3% 0;
+}
+// customer image
+.cstimg {
+    width : 60px;
+}
+// custoer h2 firstname and initial
+.firstname{
+    font-weight : 500;
+}
+// customer h3 last name
+.lastname {
+    font-weight : 300;
+}
+// OUR SECRET FORMULA
+.secret {
+    background-color: #EAE3D6;
+    margin : 20% 10% 20% 10%;
+    width : 80%;
+    padding : 5%;
+}
+
+
+
+// MIN WIDTH 768PX MEDIUM SCREEN
+@media only screen and (min-width : 768px ) {
+    .cookie_img {
+        height: 100%;
+    }
+    
+    .gridbox {
+        display : grid;
+        grid-gap : 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .imgbox {
+        grid-column: 1/2;
+        grid-row : 1/2;
+    }
+    
+    .titlebox {
+        grid-column : 2/3;
+        grid-row : 1/2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font-size: xx-large;
+        font-weight : 700;
+        letter-spacing: .07rem;
+        text-align: center;
+    }
+
+    .ul1 > li {
+        font-size: medium;
+    }
+    
+    .para {
+        font-size : medium;
+    }
+
+    .ingrdbox {
+        grid-column : 3/6;
+        grid-row : 1/2;
+    }
+    
+    .ingrd {
+        font-size : large;
+    }
+
+    .prepbox {
+        grid-column : 1/5;
+        grid-row : 2/3;
+    }
+    
+    .tipbox {
+        grid-column : 5/6;
+        grid-row : 2/3;
+    }
+
+        // CUSTOMER BACKGROUND DIV
+    .cstbgrd {
+        width : 90%;
+        padding : 3% 0 3% 0;
+        margin : 0 5% 0 5%;
+        display : flex;
+        flex-flow : row wrap;
+        justify-content: space-evenly;
+        background-image: linear-gradient(to right , #000000 , #5A5A5A);
+    }
+
+    .cstbgrd > :nth-child(1) {
+        margin-left : 2%;
+    }
+    .cstbgrd > :nth-child(3) {
+        margin-right : 2%;
+    }
+    // CUSTOMER DIV
+    .cst {
+        background-color: #ffffff;
+        flex : 0 0 25%;
+        padding : 1.5%;
+        margin : 0;
+        height: max-content;
+    }
+    // tHE CUSTOMER PARAGRAPH
+    .cst > p {
+        margin : 3% 0 3% 0;
+    }
+    // customer image
+    .cstimg {
+        width : 60px;
+    }
+    // custoer h2 firstname and initial
+    .firstname{
+        font-weight : 500;
+    }
+    // customer h3 last name
+    .lastname {
+        font-weight : 300;
+    }
+
+    .secret {
+        margin : 10% auto 10% auto;
+        width : 25%;
+        height : max-content;
+        padding : 2%;
+    }
+}
+
+// MIN WIDTH 1440PX EXTRA LARGE
+@media only screen and (min-width : 1440px ) {
+    .cookie_img {
+        height: 100%;
+    }
+    
+    .gridbox {
+        display : grid;
+        grid-gap : 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .imgbox {
+        grid-column: 1/2;
+        grid-row : 1/2;
+    }
+    
+    .titlebox {
+        grid-column : 2/3;
+        grid-row : 1/2;
+    }
+    
+    .ingrdbox {
+        grid-column : 3/6;
+        grid-row : 1/2;
+    }
+
+    .ul1 > li {
+        font-size: large;
+    }
+
+    .para {
+        font-size : large;
+    }
+    
+    .ingrd {
+        font-size : x-large;
+    }
+
+    .prepbox {
+        grid-column : 1/5;
+        grid-row : 2/3;
+    }
+    
+    .tipbox {
+        grid-column : 5/6;
+        grid-row : 2/3;
+    }
+}

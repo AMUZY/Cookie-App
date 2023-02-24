@@ -49,7 +49,7 @@ export default function DrinkMenu(props) {
       {
           cards.map((item)=>{
             return(
-              <CookieCard AddtoCart = {AddtoCart} key = {uuidv4()} num = {item.num} item={item.item} src = {item.src} name = {item.name} symbol = {item.symbol} price = {item.price}/>
+              <CookieCard AddtoCart = {AddtoCart}  key = {uuidv4()} num = {item.num} item={item.item} src = {item.src} name = {item.name} symbol = {item.symbol} price = {item.price}/>
             )
           })
         } 

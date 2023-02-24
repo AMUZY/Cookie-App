@@ -9,10 +9,10 @@ import {v4 as uuidv4} from "uuid";
 export default function CookieMenu(props) {
 
   const cards = [
-    {item : 1 , num : 1,  src : "pictures/Double.png", name : "Double Chocolate", symbol: "₦", price : 4000},
-    {item : 2 , num : 1,  src : "pictures/Danish.png", name : "Danish Butter", symbol: "₦", price : 3000},
-    {item : 3 , num : 1,  src : "pictures/Coconut.png", name : "Coconut", symbol: "₦", price : 2500},
-    {item : 4 , num : 1,  src : "pictures/Chocolate.png", name : "Chocolate Chips", symbol: "₦", price : 3500},
+    {item : 1 , num : 1,  src : "pictures/Double.jpg", name : "Double Chocolate", symbol: "₦", price : 4000},
+    {item : 2 , num : 1,  src : "pictures/Danish.jpg", name : "Danish Butter", symbol: "₦", price : 3000},
+    {item : 3 , num : 1,  src : "pictures/Coconut.jpg", name : "Coconut", symbol: "₦", price : 2500},
+    {item : 4 , num : 1,  src : "pictures/Chocolate.jpg", name : "Chocolate Chips", symbol: "₦", price : 3500},
   ]
   
   

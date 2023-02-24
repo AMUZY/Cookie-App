@@ -35,13 +35,6 @@
     outline: none !important;
 }
 
-.add {
-    background-color: #C13434; 
-}
-
-.add :hover {
-    background-color: #D24B4B;
-}
 
 @keyframes ScaleCard {
     80% {
@@ -80,7 +73,6 @@
 }
 
 .cardImg{
-
     transition: transform .2s ease-out;
 }
 
@@ -115,6 +107,14 @@
     background-color: black;
     transition : .1s ease-out;
     opacity: 70%;
+}
+
+.payment {
+    width : 3rem;
+}
+
+.recipes {
+    background-color: #EAE3D6;
 }
 
 @media only screen and (max-width : "480px"){

@@ -1,6 +1,7 @@
 // Directory imports
 import "./input.css";
 import "./App.scss";
+import "./button.scss"
 import HomePage from "./pages/HomePage";
 import NavBar from "./pages/NavBar";
 import Recipes from "./pages/Recipes";
@@ -43,84 +44,65 @@ export default function App() {
     }
   }
   
-
-  // // Function that adds a price when you press plus
-  // function SubTotal(subT) {
-  //   finalsubT.push(subT);
-  // }
-
-  // Function that removes a price when you press minus
-  // function RemTotal(num, subT) {
-  //   for (let i = 0; i < finalsubT.length; i++) {
-  //     if (finalsubT[i] === subT && num !== 1) {
-  //       finalsubT.splice(i, 1);
-  //       break;
-  //     }
-  //   }
-  // }
-
-  // Function called to remove the price from the subtotal array when we click the Remove button
-  // function RemPrice(subT) {
-  //   for (let i = 0; i < finalsubT.length; i++) {
-  //     if (finalsubT[i] === subT) {
-  //       finalsubT.splice(i, 1);
-  //       console.log(finalsubT);
-  //       break;
-  //     }
-  //   }
-  // }
-
-  // CLASS TO STORE ITEM NO
-
-  // let userArray = [];
-  // Function to create users to get their item no in cart each
   // num is going to come from num and item is going to come from props.item in CARTITEM !!!!!!!!!!
 
-  function CreateUser(num, item) {
+  function CreateUser(num, item, price) {
     const userSample = {
       item: item,
       num: num + 1,
+      price : price,
     };
 
     
     for (let i = 0; i < store.length; i++) {
-      if(store[i].num < 10){
-        if (store[i].item === userSample.item) {
+      if (store[i].item === userSample.item) {
+        if(store[i].num === 10){
+          alert("YOU WAN BUY ALL THE WHOLE MARKET NI???")
+        }
+        else{
           store[i].num = store[i].num + 1;
+          cards.map((element)=>{
+            if(element.item === store[i].item){
+              store[i].price = store[i].price + element.price;
+            }
+            return true;
+          })
+          console.log(price);
         }
-        if(store[i].item === userSample.item && store[i].price >= cards[i].price){
-          store[i].price = store[i].price + cards[i].price;
-        }
-      }
-      else{
-        alert("YOU WAN BUY ALL THE WHOLE MARKET???")
-      }
  
+      }
     }
       // Function Call to refresh component
       eUpdate();
   }
 
 
-  function DelUser(num, item) {
+  function DelUser(num, item, price) {
     const userSample = {
       item: item,
       num: num - 1,
+      price : price,
     };
 
    
     for (let i = 0; i < store.length; i++) {
-      if(store[i].num > 1){
-        if (store[i].item === userSample.item) {
+      if (store[i].item === userSample.item) {
+        if(store[i].num > 1){
           store[i].num = store[i].num - 1;
+          cards.map((element)=>{
+            if(element.item === store[i].item){
+              store[i].price = store[i].price - element.price;
+            }
+            return true;
+          })
+          console.log(price)
         }
-        if(store[i].item === userSample.item && store[i].price >= cards[i].price * 2){
-          store[i].price = store[i].price - cards[i].price;
+        else{
+          alert("minimum number reached")
         }
-      }
-      else if(store[i].item === userSample.item && store[i].num === 1){
-        alert("mimium number reached");
-      }
+
+      }  
+      
     }
  
     // Function Call to refresh component
@@ -135,6 +117,7 @@ export default function App() {
       } 
       
     }
+    
   }
 
 
@@ -148,7 +131,18 @@ export default function App() {
 
 
   // DELIVERY
-  let delfee = 1000;
+  
+
+  function RetDelFee(){
+    let delfee;
+    if(store.length === 0){
+      delfee = 0;
+    }
+    else if(store.length > 0){
+      delfee = 800;
+    }
+    return delfee;
+  }
   var SubTotal = 0;
   function SubTotalPrice(){
     // if(store.length >= 2){
@@ -169,27 +163,10 @@ export default function App() {
   }
 
   function TotalPrice(){
-    var Total = SubTotal + delfee;
+    var Total = SubTotal + RetDelFee();
     return Total;
   }
   
-  // function to store item no
-
-  // Function to sum all the prices in the array
-  // function SumSubTotal(){
-  //   if(finalsubT.length > 1){
-  //     for(let i = 1 ; i <= finalsubT.length ; i++){
-  //       allsum = (finalsubT[i] + finalsubT[i - 1]);
-  //       console.log(allsum);
-  //       return allsum;
-  //     }
-  //   }
-
-  // }
-
-  // useEffect(()=>{
-  //   console.log("useEffect")
-  // } , [store])
 
   // Function Givestore
   function GiveStore(obj) {
@@ -264,7 +241,7 @@ export default function App() {
       <Router>
         <NavBar Animate={Animate} />
         {/* CART DIV */}
-        <div className={"px-[10%] md:px-[5%] h-full overflow-y-scroll " + cart}>
+        <div className={"px-[10%] md:px-[5%] h-screen overflow-y-scroll " + cart}>
           {/* YOUR CART AND CLOSE BUTTON X DIV */}
           <div className="flex justify-between my-6 md:my-8">
             <h2 className="font-medium text-md md:text-xl ">
@@ -305,7 +282,7 @@ export default function App() {
           {/* TOTLA AMOUNT DIV */}
           <div className="h-max flex flex-col">
             {/* AMOUT DIV */}
-            <div className="h-max py-3 my-3 border-t-[1px] border-b-[1px] border-gray-400">
+            <div className="h-max py-3 my-3 border-t-[2px] border-b-[2px] border-black">
               <div className="w-full xl:w-1/2 flex justify-between">
                 {/* TOTAL NO OF ITEMS DIV */}
                 <div>
@@ -321,19 +298,36 @@ export default function App() {
                   {/* SUB TOTAL */}
                   <h3 className="priceofitems">{"₦" + SubTotalPrice()}</h3>
                   {/* DELIVERY FEE */}
-                  <h3 className="priceofitems">{"₦" + delfee}</h3>
+                  <h3 className="priceofitems">{"₦" + RetDelFee()}</h3>
                   <h3 className="priceofitems font-bold">{"₦" + TotalPrice()}</h3>
                 </div>
               </div>
             </div>
 
             {/* WE ACCEPT DIV */}
-            <div className="h-[50%]"></div>
+            <div className="h-[50%] mt-5 flex justify-between">
+              <div className="w-[50%] mr-5 flex justify-between items-center">
+                <h3 className="text-center text-[10px] xl:text-lg"> We accept: </h3>
+                <img className = "payment ml-2" src = "SVG FILES/Mastercard.svg" alt = "mastercard" />
+                <img className = "payment" src = "SVG FILES/Visa.svg" alt = "visacard" />
+                <img className = "payment" src = "SVG FILES/PayPal.svg" alt = "paypal" />
+                <img className = "payment" src = "SVG FILES/Payoneer.svg" alt = "payoneer" />
+              </div>
+              <button className="proceedbtn">
+                <p className="h-full px-5 w-full flex justify-center items-center rounded-md text-white text-[10px] lg:text-md xl:text-lg"> PROCEED TO CHECKOUT </p>
+              </button>
+            </div>
+            {/* PAYMENTS ARE SAFE AND SECURE */}
+            <div className="h-3 mb-10 flex items-center">
+              <img src = "SVG FILES/lock-closed.svg" className="h-full" alt = "lock icon" />
+              <h3 className="text-[10px] text-xs font-medium text-gray-600 md:text-sm" > Payments are safe and secure</h3>
+            </div>
+            
           </div>
         </div>
 
         {/* THE BLUR BOX */}
-        <div className={blur}> </div>
+        <button onClick = {()=>{UnAnimate();}} className={blur}> </button>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route

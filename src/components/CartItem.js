@@ -6,7 +6,6 @@ export default function CartItem(props) {
 
   
   function IncNum() {
-
     setNum(num + 1);
   }
   function DecNum() {
@@ -18,9 +17,9 @@ export default function CartItem(props) {
   return (
     <div className="py-4 h-28 flex border-b-[1px] border-gray-400 md:py-6 md:h-40">
       {/* IMAGE DIV */}
-      <div className="w-[25%] sm:w-[13%] md:w-[15%] h-full">
+      <div className=" w-[25%] sm:w-[13%] md:w-[20%] h-full">
         <img
-          className="inline h-full mx-0"
+          className="inline rounded-lg h-full mx-0"
           src={props.src}
           alt="The item in cart"
         />
@@ -40,7 +39,7 @@ export default function CartItem(props) {
               onClick={() => {
                 DecNum(num);
                 // props.RemTotal(num, props.price);
-                  props.DelUser(num, props.item)
+                  props.DelUser(num, props.item, props.price)
               }}
             >
               <img
@@ -55,7 +54,7 @@ export default function CartItem(props) {
               onClick={() => {
                 IncNum(num);
                 // props.SubTotal(props.price);
-                props.CreateUser(num, props.item)
+                props.CreateUser(num, props.item, props.price)
               }}
             >
               <img
