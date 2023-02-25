@@ -18,11 +18,11 @@ export default function MyFooter (){
                     {/* Phone */}
                     <h2 className="footertxt footersub"> Phone </h2>
                     {/* number 1 */}
-                    <a href = "wa.me//+2348007637487" className="footertxt phone">
+                    <a href = "https://wa.me//+2348124373563" className="footertxt phone">
                         +2348007637487
                     </a>
                     {/* number 2 */}
-                    <a href = "wa.me//+2349124342353" className="footertxt phone">
+                    <a href = "https://wa.me//+2348188331664" className="footertxt phone">
                         +2349124342353
                     </a>
                 </div>
