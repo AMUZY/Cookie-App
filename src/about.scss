@@ -1,0 +1,12 @@
+@keyframes ScaleCard {
+    80% {
+        transform: scale(1.05);
+    }
+    100%{
+        transform : scale(1);
+    }
+}
+
+.animate{
+    animation: ScaleCard .3s ease-in-out;
+}
