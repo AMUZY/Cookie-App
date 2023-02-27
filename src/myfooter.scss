@@ -1,4 +1,6 @@
-
+p,a,h2,h3 {
+    font-size : small;
+}
 .footer {
     width : 100%;
     height : max-content;
@@ -23,6 +25,7 @@
     display : flex;
     flex-flow : row wrap;
     justify-content: space-evenly;
+    padding : 0 2% 0 2%;
 }
 
 .other > :nth-child(n){
@@ -54,6 +57,10 @@
 
 // MEDIUM SCREEN
 @media only screen and (min-width : 768px ) {
+    p,a,h2,h3 {
+        font-size : medium;
+    }
+
     .footer {
         width : 100%;
         height : max-content;
@@ -100,5 +107,11 @@
     .useful:hover {
         color : #ffffff;
         text-decoration : underline;
+    }
+}
+
+@media only screen and (min-width : 1440px ) {
+    p,a,h2,h3 {
+        font-size : large;
     }
 }
