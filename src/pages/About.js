@@ -225,42 +225,48 @@ export default function About () {
                     <h1 className="ingrd font-bold text-lg md:text-xl"> MORE FROM CREAMY CREATIONS </h1>
                 </div>
                 {/* BREAD SHOP */}
-                <div className = "my-10">
+                <div className = "my-10 shopdiv">
                     {/* BREAD SHOP IMAGE */}
                     <div className = "mb-5">
-                        <img src = "pictures/bread_shop.png" alt = "" />
+                        <img className = "w-full h-full" src = "pictures/bread_shop.png" alt = "bread shop" />
                     </div>
-                    {/* BREAD SHOP TITLE */}
-                    <h2 className="text-lg font-bold md:text-xl">
-                        Our Bread Shop
-                    </h2>
-                    {/* BREAD SHOP TEXT */}
-                    <p>
-                        Vanessa Humming the CEO of Creamy Creations bakery, a lady with the warmest
-                        of hearts, with a passion for baking and an everlasting love for cookies, has 
-                        dedicated her time and effort in making sure her dream of having a cookie bakery
-                        comes true. Thanks to her, Nigerians can now have a taste of different flavours of 
-                        cookies we haven’t tasted ever before.
-                    </p>
+                    {/* title and paragraph div */}
+                    <div className = "">
+                        {/* BREAD SHOP TITLE */}
+                        <h2 className="text-lg font-bold md:text-xl">
+                            Our Bread Shop
+                        </h2>
+                        {/* BREAD SHOP TEXT */}
+                        <p>
+                            Vanessa Humming the CEO of Creamy Creations bakery, a lady with the warmest
+                            of hearts, with a passion for baking and an everlasting love for cookies, has 
+                            dedicated her time and effort in making sure her dream of having a cookie bakery
+                            comes true. Thanks to her, Nigerians can now have a taste of different flavours of 
+                            cookies we haven’t tasted ever before.
+                        </p>
+                    </div>
                 </div>
                 {/* CAKE SHOP */}
-                <div className = "my-10">
+                <div className = "my-10 shopdiv">
                     {/* CAKE SHOP IMAGE */}
-                    <div className = "mb-5">
-                        <img src = "pictures/cake_shop.png" alt = "" />
+                    <div className = "mb-5 md:order-2">
+                        <img className = "w-full h-full" src = "pictures/cake_shop.png" alt = "cake shop" />
                     </div>
-                    {/* CAKE SHOP TITLE */}
-                    <h2 className="text-lg font-bold md:text-xl">
-                        Our Cake Shop
-                    </h2>
-                    {/* CAKE SHOP TEXT */}
-                    <p>
-                        Vanessa Humming the CEO of Creamy Creations bakery, a lady with the warmest
-                        of hearts, with a passion for baking and an everlasting love for cookies, has 
-                        dedicated her time and effort in making sure her dream of having a cookie bakery
-                        comes true. Thanks to her, Nigerians can now have a taste of different flavours of 
-                        cookies we haven’t tasted ever before.
-                    </p>
+                    {/* title and paragraph div */}
+                    <div className = "">
+                        {/* CAKE SHOP TITLE */}
+                        <h2 className="text-lg font-bold md:text-xl">
+                            Our Cake Shop
+                        </h2>
+                        {/* CAKE SHOP TEXT */}
+                        <p>
+                            Vanessa Humming the CEO of Creamy Creations bakery, a lady with the warmest
+                            of hearts, with a passion for baking and an everlasting love for cookies, has 
+                            dedicated her time and effort in making sure her dream of having a cookie bakery
+                            comes true. Thanks to her, Nigerians can now have a taste of different flavours of 
+                            cookies we haven’t tasted ever before.
+                        </p>
+                    </div>
                 </div>
             </div>
             <MyFooter />
