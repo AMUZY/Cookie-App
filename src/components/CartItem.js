@@ -1,6 +1,14 @@
 import { useState } from "react";
 import "../App.scss";
 
+
+// IMPORTED SVGs
+import minus from "../SVG FILES/Negative-Sign.svg"
+import plus from "../SVG FILES/Plus-sign.svg"
+import bin from "../SVG FILES/trash-bin-icon.svg"
+
+
+
 export default function CartItem(props) {
   const [num, setNum] = useState(1);
 
@@ -43,7 +51,7 @@ export default function CartItem(props) {
               }}
             >
               <img
-                src="SVG FILES/Negative-Sign.svg"
+                src={minus}
                 className="mx-1 w-3 md:mx-1 md:w-3"
                 alt="negative sign"
               />
@@ -58,7 +66,7 @@ export default function CartItem(props) {
               }}
             >
               <img
-                src="SVG FILES/Plus-sign.svg"
+                src={plus}
                 className="mx-1 w-3 md:mx-1 md:w-3"
                 alt="plus sign"
               />
@@ -77,7 +85,7 @@ export default function CartItem(props) {
               }}
             >
               <img
-                src="SVG FILES/trash-bin-icon.svg"
+                src={bin}
                 className="mx-1 h-2 md:mx-1 md:h-3"
                 alt="the trashbin icon"
               />

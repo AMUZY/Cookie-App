@@ -322,7 +322,9 @@ export default function App() {
                 <img className = "payment" src = {paypal} alt = "paypal" />
                 <img className = "payment" src = {payoneer} alt = "payoneer" />
               </div>
-              <button className="proceedbtn">
+              <button className="proceedbtn" onClick={()=> {
+                alert("Relax, I know you love cookies, but no payment API service added yet")
+              }}>
                 <p className="h-full px-5 w-full flex justify-center items-center rounded-md text-white text-[10px] lg:text-md xl:text-lg"> PROCEED TO CHECKOUT </p>
               </button>
             </div>
