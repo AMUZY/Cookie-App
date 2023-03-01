@@ -10,6 +10,7 @@ import CookieMenu from "./pages/CookieMenu";
 import DrinkMenu from "./pages/DrinksMenu";
 import { useReducer, useState } from "react";
 import CartItem from "./components/CartItem";
+import NotFound from "./components/NotFound"
 import { v4 as uuidv4 } from "uuid";
 
 // Hooks and Resources import
@@ -341,16 +342,11 @@ export default function App() {
         <button onClick = {()=>{UnAnimate();}} className={blur}> </button>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route
-            path="/cookie-menu"
-            element={<CookieMenu GiveStore={GiveStore} />}
-          />
+          <Route path="/cookie-menu" element={<CookieMenu GiveStore={GiveStore} />} />
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/about" element={<About />} />
-          <Route
-            path="/drinks-menu"
-            element={<DrinkMenu GiveStore={GiveStore} />}
-          />
+          <Route path="/drinks-menu" element={<DrinkMenu GiveStore={GiveStore} />} />
+          <Route path = "*" element = {<NotFound />} />
         </Routes>
       </Router>
     </div>
