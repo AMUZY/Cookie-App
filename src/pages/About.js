@@ -1,9 +1,11 @@
 import "../App.scss"
 import "../about.scss"
 import MyFooter from "../components/MyFooter"
+import ProgressiveImage from "react-progressive-image"
 
 
 // IMPORTED IMAGES
+import placeholder from "../pictures/placeholder.png"
 import ceo from "../pictures/CEO.png"
 import aboutus1  from "../pictures/about_us1.png"
 import aboutus2  from "../pictures/about_us2.png"
@@ -248,7 +250,9 @@ export default function About () {
                 <div className = "my-10 shopdiv">
                     {/* BREAD SHOP IMAGE */}
                     <div className = "mb-5">
-                        <img className = "w-full h-full" src = {breadshop} alt = "bread shop" />
+                        <ProgressiveImage src = {breadshop} placeholder = {placeholder}>
+                            {(src)=> <img className = "w-full h-full" src = {breadshop} alt = "bread shop" />}
+                        </ProgressiveImage>
                     </div>
                     {/* title and paragraph div */}
                     <div className = "">
@@ -270,7 +274,9 @@ export default function About () {
                 <div className = "my-10 shopdiv">
                     {/* CAKE SHOP IMAGE */}
                     <div className = "mb-5 md:order-2">
-                        <img className = "w-full h-full" src = {cakeshop} alt = "cake shop" />
+                         <ProgressiveImage src = {cakeshop} placeholder = {placeholder}>
+                            {(src)=> <img className = "w-full h-full" src = {cakeshop} alt = "cake shop" />}
+                        </ProgressiveImage>
                     </div>
                     {/* title and paragraph div */}
                     <div className = "">
