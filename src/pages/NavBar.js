@@ -107,16 +107,17 @@ export default function NavBar(props) {
     <>
       <div className={checkUrl()}>
         <section id="top">
-          <div className="flex justify-between items-center pt-2 mx-5 mb-2 md:justify-between">
+          <div className="flex justify-between items-center pt-2 mx-5 mb-5 md:mb-2 md:justify-between">
             <h1
               className={
-                "script font-sans mr-52 not-italic font-bold text-md md:text-3xl md:mr-0 " +
+                "script font-sans not-italic font-bold text-md md:text-3xl md:mr-0 " +
                 white()
               }
             >
               Creamy Creations
             </h1>
-            <ul className="hidden w-80 mr-[130px] h-5 p-0 flex justify-between list-none md:flex">
+            {/* NavLink in big screen */}
+            <ul className="hidden w-80 mr-[130px] h-5 p-0 flex justify-between list-none lg:flex">
               {navLinks.map((navlink) => {
                 return (
                   <li
@@ -140,7 +141,7 @@ export default function NavBar(props) {
           {/* Nav LInk Red Border Bar */}
           <div
             className={
-              "mx-5 my-2 py-1 border-2 md:hidden rounded-md " + white()
+              "mx-5 my-2 py-1 border-2 lg:hidden rounded-md " + white()
             }
           >
             <ul className="flex justify-around items-center list-none text-red-600">

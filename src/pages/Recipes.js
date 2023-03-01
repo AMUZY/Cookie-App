@@ -2,6 +2,20 @@ import "../App.scss"
 import "../recipes.scss"
 import MyFooter from "../components/MyFooter"
 
+// IMPORTED IMAGES
+import recipe1 from "../pictures/recipe_1.png"
+import recipe2 from "../pictures/recipe_2.png"
+import cookieguy1 from "../pictures/cookieguy1.jpg"
+import cookielady from "../pictures/cokkielady.jpg"
+import cookieguy2 from "../pictures/cookieguy2.jpg"
+// IMPORTED SVGs
+import fullstar from "../SVG FILES/star.svg"
+import halfstar from "../SVG FILES/star-half.svg"
+import lock from "../SVG FILES/lock-closed.svg"
+
+
+
+
 export default function Recipes () {
     return (
         <div>
@@ -17,7 +31,7 @@ export default function Recipes () {
             {/* chocolate cookies div done by flexbox and grid */}
             <div className = "gridbox max-h-max">
                 {/* Chocolate Cookies IMG */}
-                <div className = "imgbox" ><img className = "m-0 cookie_img" src = "pictures/recipe_1.png"  alt = "cookie" /></div>
+                <div className = "imgbox" ><img className = "m-0 cookie_img" src = {recipe1}  alt = "cookie" /></div>
                 {/* Chocolate Cookies TITLE */}
                 <div className = "recipes titlebox h-[50]%" ><h3 className = "script title" >Chocolate Cookies</h3></div>
                 {/* Chocolate Cookies Ingredients */}
@@ -88,7 +102,7 @@ export default function Recipes () {
             {/* danish butter cookies div done by grid */}
             <div className = "gridbox max-h-max">
                 {/* Danish Cookies IMG */}
-                <div className = "imgbox" ><img className = "m-0 cookie_img" src = "pictures/recipe_2.png" alt = "cookie" /></div>
+                <div className = "imgbox" ><img className = "m-0 cookie_img" src = {recipe2} alt = "cookie" /></div>
                 {/* Danish Cookies TITLE */}
                 <div className = "recipes titlebox" ><h3 className = "script title" >Danish Butter Cookies</h3></div>
                 {/* Danish Cookies Ingredients */}
@@ -161,7 +175,7 @@ export default function Recipes () {
                     <div className = "flex justify-start" >
                         {/* image div */}
                         <div>
-                            <img className = "rounded-full cstimg" src = "pictures/cookieguy1.jpg" alt = "customer 1" />
+                            <img className = "rounded-full cstimg" src = {cookieguy1} alt = "customer 1" />
                         </div>
                         {/* name div */}
                         <div className = "flex flex-col justify-evenly mx-3">
@@ -177,11 +191,11 @@ export default function Recipes () {
                     </p>
                     {/* stars div */}
                     <div className = "flex flex-row">
-                        <img src = "SVG FILES/star.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-1.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-2.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-3.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-half.svg" alt = "half star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {halfstar} alt = "half star"/>
                     </div>
                 </div>
                 {/* customer 2 */}
@@ -190,7 +204,7 @@ export default function Recipes () {
                     <div className = "flex justify-start" >
                         {/* image div */}
                         <div>
-                             <img className = "rounded-full cstimg" src = "pictures/cokkielady.jpg" alt = "customer 2" />
+                             <img className = "rounded-full cstimg" src = {cookielady} alt = "customer 2" />
                         </div>
                         {/* name div */}
                         <div className = "flex flex-col justify-evenly mx-3">
@@ -206,11 +220,11 @@ export default function Recipes () {
                     </p>
                     {/* stars div */}
                     <div className = "flex flex-row">
-                        <img src = "SVG FILES/star.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-1.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-2.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-3.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-half.svg" alt = "half star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {halfstar} alt = "half star"/>
                     </div>
                 </div>
                 {/* customer 3 */}
@@ -219,7 +233,7 @@ export default function Recipes () {
                     <div className = "flex justify-start" >
                         {/* image div */}
                         <div>
-                           <img className = "rounded-full cstimg" src = "pictures/cookieguy2.jpg" alt = "customer 3" />
+                           <img className = "rounded-full cstimg" src = {cookieguy2} alt = "customer 3" />
                         </div>
                         {/* name div */}
                         <div className = "flex flex-col justify-evenly mx-3">
@@ -235,18 +249,18 @@ export default function Recipes () {
                     </p>
                     {/* stars div */}
                     <div className = "flex flex-row">
-                        <img src = "SVG FILES/star.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-1.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-2.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star-3.svg" alt = "full star"/>
-                        <img src = "SVG FILES/star.svg" alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
+                        <img src = {fullstar} alt = "full star"/>
                     </div>
                 </div>
             </div>
             
             {/* OUR SECRET FORMULA */}
             <div className="rounded-xl secret flex flex-col justify-center items-center">
-                <img src = "SVG FILES/lock-closed.svg" alt = "lock icon" />
+                <img src = {lock} alt = "lock icon" />
                 <h1 className="ingrd">Our Secret Formula</h1>
                 <p className="text-center">
                     We don’t disclose all of our recipes. As a bakery

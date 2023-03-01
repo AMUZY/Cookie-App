@@ -4,12 +4,18 @@ import CookieCard from "../components/CookieCard";
 import {v4 as uuidv4} from "uuid";
 
 
+import drink1 from "../pictures/milk.png"
+import drink2 from "../pictures/choco.png"
+import drink3 from "../pictures/smoothie.png"
+import drink4 from "../pictures/yoghurt.png"
+
+
 export default function DrinkMenu(props) {
   const cards = [
-    {item : 5, num : 1, src : "pictures/milk.png", name : "Milk", symbol: "₦", price : 350},
-    {item : 6, num : 1, src : "pictures/choco.png", name : "Chocolate Drink", symbol: "₦", price : 200},
-    {item : 7, num : 1, src : "pictures/smoothie.png", name : "Smoothie", symbol: "₦", price : 350},
-    {item : 8, num : 1, src : "pictures/yoghurt.png", name : "Yoghurt", symbol: "₦", price : 300},
+    {item : 5, num : 1, src : drink1, name : "Milk", symbol: "₦", price : 350},
+    {item : 6, num : 1, src : drink2, name : "Chocolate Drink", symbol: "₦", price : 200},
+    {item : 7, num : 1, src : drink3 , name : "Smoothie", symbol: "₦", price : 350},
+    {item : 8, num : 1, src : drink4, name : "Yoghurt", symbol: "₦", price : 300},
   ]
 
   function AddtoCart(item ,num , src, name , price){

@@ -3,6 +3,26 @@ import "../about.scss"
 import MyFooter from "../components/MyFooter"
 
 
+// IMPORTED IMAGES
+import ceo from "../pictures/CEO.png"
+import aboutus1  from "../pictures/about_us1.png"
+import aboutus2  from "../pictures/about_us2.png"
+import aboutus3 from "../pictures/about_us3.png"
+import aboutus4  from "../pictures/about_us4.png"
+import ig from "../pictures/instagram-png.png"
+import linkedin from "../pictures/linkedin-png.png"
+import twitter from "../pictures/twitter-png.png"
+import cookieguy1 from "../pictures/cookieguy1.jpg"
+import cookielady from "../pictures/cokkielady.jpg"
+import cookieguy2 from "../pictures/cookieguy2.jpg"
+import breadshop from "../pictures/bread_shop.png"
+import cakeshop from "../pictures/cake_shop.png"
+//IMPORTED SVGs
+import leftquote from "../SVG FILES/left-quote.svg"
+import rightquote from "../SVG FILES/right-quote.svg"
+
+
+
 export default function About () {
     return (
         <div>
@@ -22,7 +42,7 @@ export default function About () {
                     <div className="passport">
                         <div className="ceoimg mb-5">
                             {/* CEO IMAGE */}
-                            <img className = "mr-5" src = "./pictures/CEO.png" alt = "beautiful young ceo" />
+                            <img className = "mr-5" src = {ceo} alt = "beautiful young ceo" />
                         </div>
                         <div className="ceodisc">
                             {/* CEO DESCRIPTION */}
@@ -35,7 +55,7 @@ export default function About () {
                             </p>
                         {/* QUOTE DIV */}
                             <div className="quotediv">
-                                <img className = "img1" src = "./SVG FILES/left-quote.svg" alt = "left quote" />
+                                <img className = "img1" src = {leftquote} alt = "left quote" />
                                 <p className="textcol text-xs md:text-lg">
                                 With gratitude from my heart, I want to specially give thanks to everybody
                                 contributing to the success of this great company, from the managers
@@ -44,17 +64,17 @@ export default function About () {
                                 <h2 className="textcol font-bold">
                                     -THE CEO
                                 </h2>
-                                <img className = "img2" src = "./SVG FILES/right-quote.svg" alt = "right quote" />
+                                <img className = "img2" src = {rightquote} alt = "right quote" />
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* GALLERY DIV */}
                 <div className="gallery">
-                    <img src = "./pictures/about_us1.png" alt = "cookie 1" />
-                    <img src = "./pictures/about_us2.png" alt = "cookie 2" />
-                    <img src = "./pictures/about_us3.png" alt = "cookie 3" />
-                    <img src = "./pictures/about_us4.png" alt = "cookie 4" />
+                    <img src = {aboutus1} alt = "cookie 1" />
+                    <img src = {aboutus2} alt = "cookie 2" />
+                    <img src = {aboutus3} alt = "cookie 3" />
+                    <img src = {aboutus4} alt = "cookie 4" />
                 </div>
             </div>
             {/* MEET THE REST OF THE TEAM */}
@@ -82,7 +102,7 @@ export default function About () {
                             {/* PICTURE DIV */}
                             <div className = "flex flex-col items-center my-3">
                                 {/* PERSONNAL IMAGE */}
-                                <img className = "rounded-full" src = "pictures/cookieguy1.jpg" alt = "personnel"/>
+                                <img className = "rounded-full" src = {cookieguy1} alt = "personnel"/>
                                 {/* NAME */}
                                 <h2> Shawn Michael </h2>
                                 {/* ROLE */}
@@ -90,11 +110,11 @@ export default function About () {
                                 {/* ICONS DIV */}
                                 <div className = "icondiv">
                                     {/* INSTAGRAM */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://instagram.com" ><img src = "pictures/instagram-png.png" alt = "instagram" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://instagram.com" ><img src = {ig} alt = "instagram" /></a>
                                     {/* LINKED IN */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://linkedin.com" ><img src = "pictures/linkedin-png.png"alt = "linkedin" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://linkedin.com" ><img src = {linkedin} alt = "linkedin" /></a>
                                     {/* TWITTER */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://twitter.com" ><img src = "pictures/twitter-png.png" alt = "twitter" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://twitter.com" ><img src = {twitter} alt = "twitter" /></a>
                                 </div>
                             </div>
                         </div>
@@ -111,7 +131,7 @@ export default function About () {
                             {/* PICTURE DIV */}
                             <div className = "flex flex-col items-center my-3">
                                 {/* PERSONNAL IMAGE */}
-                                <img className = "rounded-full" src = "pictures/cokkielady.jpg" alt = "personnel"/>
+                                <img className = "rounded-full" src = {cookielady} alt = "personnel"/>
                                 {/* NAME */}
                                 <h2> Vanessa Humming</h2>
                                 {/* ROLE */}
@@ -119,11 +139,11 @@ export default function About () {
                                 {/* ICONS DIV */}
                                 <div className = "icondiv">
                                     {/* INSTAGRAM */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://instagram.com" ><img src = "pictures/instagram-png.png" alt = "instagram" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://instagram.com" ><img src = {ig} alt = "instagram" /></a>
                                     {/* LINKED IN */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://linkedin.com" ><img src = "pictures/linkedin-png.png"alt = "linkedin" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://linkedin.com" ><img src = {linkedin} alt = "linkedin" /></a>
                                     {/* TWITTER */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://twitter.com" ><img src = "pictures/twitter-png.png" alt = "twitter" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://twitter.com" ><img src = {twitter} alt = "twitter" /></a>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +160,7 @@ export default function About () {
                             {/* PICTURE DIV */}
                             <div className = "flex flex-col items-center my-3">
                                 {/* PERSONNAL IMAGE */}
-                                <img className = "rounded-full" src = "pictures/cookieguy2.jpg" alt = "personnel"/>
+                                <img className = "rounded-full" src = {cookieguy2} alt = "personnel"/>
                                 {/* NAME */}
                                 <h2> Jacobs Germane </h2>
                                 {/* ROLE */}
@@ -148,11 +168,11 @@ export default function About () {
                                 {/* ICONS DIV */}
                                 <div className = "icondiv">
                                     {/* INSTAGRAM */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://instagram.com" ><img src = "pictures/instagram-png.png" alt = "instagram" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://instagram.com" ><img src = {ig} alt = "instagram" /></a>
                                     {/* LINKED IN */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://linkedin.com" ><img src = "pictures/linkedin-png.png"alt = "linkedin" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://linkedin.com" ><img src = {linkedin} alt = "linkedin" /></a>
                                     {/* TWITTER */}
-                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://twitter.com" ><img src = "pictures/twitter-png.png" alt = "twitter" /></a>
+                                    <a className = "mx-[5%] md:mx-[5%]" href = "https://twitter.com" ><img src = {twitter} alt = "twitter" /></a>
                                 </div>
                             </div>
                         </div>
@@ -228,7 +248,7 @@ export default function About () {
                 <div className = "my-10 shopdiv">
                     {/* BREAD SHOP IMAGE */}
                     <div className = "mb-5">
-                        <img className = "w-full h-full" src = "pictures/bread_shop.png" alt = "bread shop" />
+                        <img className = "w-full h-full" src = {breadshop} alt = "bread shop" />
                     </div>
                     {/* title and paragraph div */}
                     <div className = "">
@@ -250,7 +270,7 @@ export default function About () {
                 <div className = "my-10 shopdiv">
                     {/* CAKE SHOP IMAGE */}
                     <div className = "mb-5 md:order-2">
-                        <img className = "w-full h-full" src = "pictures/cake_shop.png" alt = "cake shop" />
+                        <img className = "w-full h-full" src = {cakeshop} alt = "cake shop" />
                     </div>
                     {/* title and paragraph div */}
                     <div className = "">

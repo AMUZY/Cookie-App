@@ -2,6 +2,12 @@ import "../App.scss"
 import "../myfooter.scss"
 import { NavLink } from "react-router-dom"
 
+
+// IMPORTED PICTURES
+import ig from "../pictures/instagram-png.png"
+import linkedin from "../pictures/linkedin-png.png"
+import twitter from "../pictures/twitter-png.png"
+
 export default function MyFooter (){
     return (
         <>
@@ -40,11 +46,11 @@ export default function MyFooter (){
                     <h1 className="footertxt footersub"> Social Media </h1>
                     <div className="flex justify-start my-[2%]">
                         {/* INSTAGRAM */}
-                        <a className = "m-[5%] md:m-[5%]" href = "https://instagram.com" ><img src = "pictures/instagram-png.png" alt = "instagram" /></a>
+                        <a className = "m-[5%] md:m-[5%]" href = "https://instagram.com" ><img src = {ig} alt = "instagram" /></a>
                         {/* LINKED IN */}
-                        <a className = "m-[5%] md:m-[5%]" href = "https://linkedin.com" ><img src = "pictures/linkedin-png.png"alt = "linkedin" /></a>
+                        <a className = "m-[5%] md:m-[5%]" href = "https://linkedin.com" ><img src = {linkedin} alt = "linkedin" /></a>
                         {/* TWITTER */}
-                        <a className = "m-[5%] md:m-[5%]" href = "https://twitter.com" ><img src = "pictures/twitter-png.png" alt = "twitter" /></a>
+                        <a className = "m-[5%] md:m-[5%]" href = "https://twitter.com" ><img src = {twitter} alt = "twitter" /></a>
                     </div>
                 </div>
                 {/* Location DIV */}

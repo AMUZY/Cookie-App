@@ -3,11 +3,12 @@ import HeroText from "../components/HeroText";
 import HeroText2 from "../components/HeroText2";
 
 import "../App.scss"
+import landpic from "../pictures/LAND_PIC.png"
+import confetti from "../pictures/party-confetti.png"
 
 
 
 export default function HomePage () {
-
 
     return (
         <div className="homepage">
@@ -15,7 +16,7 @@ export default function HomePage () {
             <img
                 id="bck_image"
                 className="hidden z-[0] absolute rotate-180 w-96 md:w-96 md:rotate-0 lg:block xl:w-auto lg:top-48 lg:left-1/3 xl:top-48 xl:left-1/4"
-                src="pictures/LAND_PIC.png"
+                src={landpic}
                 alt="ameno"
             />
 
@@ -47,7 +48,7 @@ export default function HomePage () {
                 <div className="hidden w-auto h-max mr-5 mt-24 flex flex-col items-end md:flex">
                     <img
                     className="w-20 h-20"
-                    src="pictures/party-confetti.png"
+                    src={confetti}
                     alt="ameno"
                     />
                     <HeroText2 text="Get up to" />
@@ -79,7 +80,7 @@ export default function HomePage () {
                     <div className="w-auto h-max mr-5 flex flex-col items-end md:hidden">
                         <img
                         className="hidden w-20 h-20 md:inline-block"
-                        src="pictures/party-confetti.png"
+                        src={confetti}
                         alt="ameno"
                         />
                         <HeroText2 text="Get up to" />

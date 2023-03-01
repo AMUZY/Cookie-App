@@ -12,7 +12,7 @@
 }
 
 .ceo_bckgrd {
-    background: url(../public/pictures/ceo_bckgrd.jpg) top/170% 100% no-repeat;
+    background: url(../src/pictures/ceo_bckgrd.jpg) top/170% 100% no-repeat;
     overflow: hidden;
     width: 100%;
     height: max-content;
@@ -188,10 +188,10 @@
 }
 
 
-// MEDIUM SCREENS
-@media only screen and (min-width : 768px) {
+// LARGE SCREENS
+@media only screen and (min-width : 976px) {
     .ceo_bckgrd {
-        background: url(../public/pictures/ceo_bckgrd.jpg) top/100% 100% no-repeat;
+        background: url(../src/pictures/ceo_bckgrd.jpg) top/100% 100% no-repeat;
         display: flex;
         flex-flow : row nowrap;
     }

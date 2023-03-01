@@ -3,16 +3,21 @@ import "../App.scss";
 import CookieCard from "../components/CookieCard";
 import {v4 as uuidv4} from "uuid";
 
+import cookie1 from "../pictures/Double.jpg"
+import cookie2 from "../pictures/Danish.jpg"
+import cookie3 from "../pictures/Coconut.jpg"
+import cookie4 from "../pictures/Chocolate.jpg"
+
 
 
 
 export default function CookieMenu(props) {
 
   const cards = [
-    {item : 1 , num : 1,  src : "pictures/Double.jpg", name : "Double Chocolate", symbol: "₦", price : 4000},
-    {item : 2 , num : 1,  src : "pictures/Danish.jpg", name : "Danish Butter", symbol: "₦", price : 3000},
-    {item : 3 , num : 1,  src : "pictures/Coconut.jpg", name : "Coconut", symbol: "₦", price : 2500},
-    {item : 4 , num : 1,  src : "pictures/Chocolate.jpg", name : "Chocolate Chips", symbol: "₦", price : 3500},
+    {item : 1 , num : 1,  src : cookie1, name : "Double Chocolate", symbol: "₦", price : 4000},
+    {item : 2 , num : 1,  src : cookie2, name : "Danish Butter", symbol: "₦", price : 3000},
+    {item : 3 , num : 1,  src : cookie3, name : "Coconut", symbol: "₦", price : 2500},
+    {item : 4 , num : 1,  src : cookie4, name : "Chocolate Chips", symbol: "₦", price : 3500},
   ]
   
   

@@ -15,6 +15,15 @@ import { v4 as uuidv4 } from "uuid";
 // Hooks and Resources import
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// IMPORTED SVGs
+import xbutton from "./SVG FILES/X-button.svg"
+import mastercard from "./SVG FILES/Mastercard.svg"
+import visa from "./SVG FILES/Visa.svg"
+import paypal from "./SVG FILES/PayPal.svg"
+import payoneer from "./SVG FILES/Payoneer.svg"
+import lock from "./SVG FILES/lock-closed.svg"
+
+
 export default function App() {
   const [store, setStore] = useState([]);
 
@@ -253,7 +262,7 @@ export default function App() {
                 UnAnimate();
               }}
             >
-              <img alt="X button" src="SVG FILES/x-button.svg" />
+              <img alt="X button" src= {xbutton} />
             </button>
           </div>
           <div className="h-[70%] overflow-y-scroll">
@@ -308,10 +317,10 @@ export default function App() {
             <div className="h-[50%] mt-5 flex justify-between">
               <div className="w-[50%] mr-5 flex justify-between items-center">
                 <h3 className="text-center text-[10px] xl:text-lg"> We accept: </h3>
-                <img className = "payment ml-2" src = "SVG FILES/Mastercard.svg" alt = "mastercard" />
-                <img className = "payment" src = "SVG FILES/Visa.svg" alt = "visacard" />
-                <img className = "payment" src = "SVG FILES/PayPal.svg" alt = "paypal" />
-                <img className = "payment" src = "SVG FILES/Payoneer.svg" alt = "payoneer" />
+                <img className = "payment ml-2" src = {mastercard} alt = "mastercard" />
+                <img className = "payment" src = {visa} alt = "visacard" />
+                <img className = "payment" src = {paypal} alt = "paypal" />
+                <img className = "payment" src = {payoneer} alt = "payoneer" />
               </div>
               <button className="proceedbtn">
                 <p className="h-full px-5 w-full flex justify-center items-center rounded-md text-white text-[10px] lg:text-md xl:text-lg"> PROCEED TO CHECKOUT </p>
@@ -319,7 +328,7 @@ export default function App() {
             </div>
             {/* PAYMENTS ARE SAFE AND SECURE */}
             <div className="h-3 mb-10 flex items-center">
-              <img src = "SVG FILES/lock-closed.svg" className="h-full" alt = "lock icon" />
+              <img src = {lock} className="h-full" alt = "lock icon" />
               <h3 className="text-[10px] text-xs font-medium text-gray-600 md:text-sm" > Payments are safe and secure</h3>
             </div>
             
