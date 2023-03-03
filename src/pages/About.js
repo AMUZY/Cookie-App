@@ -250,8 +250,8 @@ export default function About () {
                 <div className = "my-10 shopdiv">
                     {/* BREAD SHOP IMAGE */}
                     <div className = "mb-5">
-                        <ProgressiveImage src = {breadshop} placeholder = {placeholder}>
-                            {(src)=> <img className = "w-full h-full" src = {breadshop} alt = "bread shop" />}
+                        <ProgressiveImage delay = {50000} src = {breadshop} placeholder = {placeholder} >
+                            {src => <img className = "w-full h-full" src = {breadshop} alt = "bread shop" />}
                         </ProgressiveImage>
                     </div>
                     {/* title and paragraph div */}
@@ -275,7 +275,7 @@ export default function About () {
                     {/* CAKE SHOP IMAGE */}
                     <div className = "mb-5 md:order-2">
                          <ProgressiveImage src = {cakeshop} placeholder = {placeholder}>
-                            {(src)=> <img className = "w-full h-full" src = {cakeshop} alt = "cake shop" />}
+                            {src=> <img className = "w-full h-full" src = {cakeshop} alt = "cake shop" />}
                         </ProgressiveImage>
                     </div>
                     {/* title and paragraph div */}

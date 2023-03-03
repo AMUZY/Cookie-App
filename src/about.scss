@@ -224,8 +224,9 @@
         justify-content: flex-start;
     }
 
+
     .ceoimg {
-        flex : 0 0 10%;
+        flex : 0 0 20%;
     }
 
     .ceoimg > img {
@@ -309,7 +310,7 @@
     }
 
     .trait > div {
-        margin : 0 5% 0 5%;
+        margin : 2%;
     }
 
     .whatdiv {
@@ -333,5 +334,9 @@
 }
 
 @media only screen and (min-width : 1440px) {
+    .ceoimg > img {
+        width : 65%;
+        height : 30%;
+    }
     
 }
