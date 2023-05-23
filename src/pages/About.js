@@ -44,7 +44,7 @@ export default function About () {
                     <div className="passport">
                         <div className="ceoimg mb-5">
                             {/* CEO IMAGE */}
-                            <img className = "mr-5" src = {ceo} alt = "beautiful young ceo" />
+                            <img className = "mr-5 objfitimg" src = {ceo} alt = "beautiful young ceo" />
                         </div>
                         <div className="ceodisc">
                             {/* CEO DESCRIPTION */}
@@ -73,10 +73,10 @@ export default function About () {
                 </div>
                 {/* GALLERY DIV */}
                 <div className="gallery">
-                    <img src = {aboutus1} alt = "cookie 1" />
-                    <img src = {aboutus2} alt = "cookie 2" />
-                    <img src = {aboutus3} alt = "cookie 3" />
-                    <img src = {aboutus4} alt = "cookie 4" />
+                    <img className = "objfitimg" src = {aboutus1} alt = "cookie 1" />
+                    <img className = "objfitimg" src = {aboutus2} alt = "cookie 2" />
+                    <img className = "objfitimg" src = {aboutus3} alt = "cookie 3" />
+                    <img className = "objfitimg" src = {aboutus4} alt = "cookie 4" />
                 </div>
             </div>
             {/* MEET THE REST OF THE TEAM */}

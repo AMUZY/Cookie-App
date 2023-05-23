@@ -1,3 +1,28 @@
+$white : #ECEDFF;
+$black : #000000 ;
+
+::-webkit-scrollbar {
+    width: 5px;
+    }
+
+::-webkit-scrollbar-track {
+    background: $black;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: #793820;
+    border-radius: .8rem;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+    background: #B17057;
+    }
+
+@media only screen and (min-width : 480px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        }
+}
 
 .navbarCrown {
     height : 100%;

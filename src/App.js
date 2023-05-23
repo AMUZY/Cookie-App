@@ -13,6 +13,7 @@ import CartItem from "./components/CartItem";
 import NotFound from "./components/NotFound"
 import { v4 as uuidv4 } from "uuid";
 
+
 // Hooks and Resources import
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -25,8 +26,10 @@ import payoneer from "./SVG FILES/Payoneer.svg"
 import lock from "./SVG FILES/lock-closed.svg"
 
 
+
 export default function App() {
   const [store, setStore] = useState([]);
+
 
   // Function to make store state to update to effect the item removal from cart
   const [ignored, eUpdate] = useReducer((x) => x + 1, 0);
@@ -248,6 +251,7 @@ export default function App() {
 
   return (
     <div className="App min-h-[100vh] navbarCrown relative overflow-hidden">
+
       <Router>
         <NavBar Animate={Animate} />
         {/* CART DIV */}

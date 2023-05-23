@@ -33,6 +33,10 @@
     margin : 5%;
 }
 
+.objfitimg {
+    object-fit: cover;
+}
+
 .passport {
     display: flex;
     flex-flow : column nowrap;
@@ -45,6 +49,7 @@
     justify-content: center;
 }
 .ceoimg > img {
+    object-fit: contain;
     width : 20%;
 }
 
